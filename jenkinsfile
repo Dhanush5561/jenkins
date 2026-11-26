@@ -9,8 +9,8 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 withDockerRegistry(credentialsId: 'docker-hub-creds', url: '') {
-                    sh 'docker tag mvn_docker vikas2609/mvn_docker:$BUILD_NUMBER'
-                    sh 'docker push vikas2609/mvn_docker:$BUILD_NUMBER'
+                    sh 'docker tag mvn_docker dhanush5561/mvn_docker:$BUILD_NUMBER'
+                    sh 'docker push dhanush5561/mvn_docker:$BUILD_NUMBER'
                 }
             }
         }
